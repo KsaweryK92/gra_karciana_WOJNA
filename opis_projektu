@@ -20,12 +20,12 @@ rzecz zwycięzcy. Zwycięża gracz, który posiada wszystkie karty z talii pocz�
 
 **Rozgrywka**
 
->Przebieg `gra_karciana_wojna.py` rozpoczyna się od ustalenia ilości kart w talii początkowej, która zostanie rozdana 
-między obu graczy. Cała talia kart to 52 karty, zatem maksymalnie użytkownik może podać liczbę 26 kart przypadających 
-dla każdego z graczy. W przypadku podania złej liczby program odpytuje w nieskończoność użytkownika o podanie poprawnej 
-liczby. Następnie obu graczom zostają przyporządkowane dwie podtalie kart, którymi będą operować podczas rozgrywki. W 
-następnym kroku użytkownik jest proszony o wybór trybu gry - `tryb do ręki` lub `tryb do odrzuconych`. Jest to koniec 
-konfiguracji programu, pora rozpocząć **WOJNĘ** !!!
+>W celu uruchomienia gry należy włączyć program `gra_karciana_wojna.py`. Przebieg gry rozpoczyna się od ustalenia ilości 
+kart w talii początkowej, która zostanie rozdana między obu graczy. Cała talia kart to 52 karty, zatem maksymalnie 
+użytkownik może podać liczbę 26 kart przypadających dla każdego z graczy. W przypadku podania złej liczby program 
+odpytuje w nieskończoność użytkownika o podanie poprawnej liczby. Następnie obu graczom zostają przyporządkowane dwie 
+podtalie kart, którymi będą operować podczas rozgrywki. W następnym kroku użytkownik jest proszony o wybór trybu gry - 
+`tryb do ręki` lub `tryb do odrzuconych`. Jest to koniec konfiguracji programu, pora rozpocząć **WOJNĘ** !!!
 
 **Moduły dodatkowe**
 
