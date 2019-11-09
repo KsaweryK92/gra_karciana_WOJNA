@@ -1,6 +1,17 @@
 import random
 
 
+class gracz:
+    def __init__(self):
+        self.talia_kart = []
+
+    def __repr__(self):
+        return f'Gracz - {self.talia_kart}'
+
+    def __str__(self):
+        return f'Utworzono gracza do gry WOJNA, z następującą talią kart na ręku: {self.talia_kart}'
+
+
 opis_kart = {2: (1, '2 pik'), 15: (1, '2 trefl'), 28: (1, '2 karo'), 41: (1, '2 kier'), 3: (2, '3 pik'), 16: (2, '3 trefl'), 29: (2, '3 karo'),
              42: (2, '3 kier'), 4: (3, '4 pik'), 17: (3, '4 trefl'), 30: (3, '4 karo'), 43: (3, '4 kier'), 5: (4, '5 pik'), 18: (4, '5 trefl'),
              31: (4, '5 karo'), 44: (4, '5 kier'), 6: (5, '6 pik'), 19: (5, '6 trefl'), 32: (5, '6 karo'), 45: (5, '6 kier'), 7: (6, '7 pik'),
@@ -20,12 +31,12 @@ def rozdaj_karty(ilosc_kart):
 
 
 def utworz_graczy(karty1, karty2, opis_kart):
-    gracz1 = []
-    gracz2 = []
+    gracz1 = gracz()
+    gracz2 = gracz()
     for item in karty1:
-        gracz1.append(opis_kart[item])
+        gracz1.talia_kart.append(opis_kart[item])
     for kitem in karty2:
-        gracz2.append((opis_kart[kitem]))
+        gracz2.talia_kart.append((opis_kart[kitem]))
     return gracz1, gracz2
 
 

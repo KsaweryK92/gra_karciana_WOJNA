@@ -36,23 +36,23 @@ if __name__ == '__main__':
     gracz1, gracz2 = utworz_graczy(karty1, karty2, opis_kart)
 
     przebieg_rozgrywki += 'Gracz1 otrzymał następujący zestaw kart:\n'
-    for item in gracz1:
+    for item in gracz1.talia_kart:
         przebieg_rozgrywki += item[1] + ', '
     przebieg_rozgrywki += '\n'
     przebieg_rozgrywki += 'Gracz2 otrzymał następujący zestaw kart:\n'
-    for item in gracz2:
+    for item in gracz2.talia_kart:
         przebieg_rozgrywki += item[1] + ', '
     przebieg_rozgrywki += '\n'
 
     if not tryb:
-        zwyciezca, przebieg_rozgrywki_tryb_do_odrzuconych = tryb_do_odrzuconych(gracz1, gracz2)
+        zwyciezca, przebieg_rozgrywki_tryb_do_odrzuconych = tryb_do_odrzuconych(gracz1.talia_kart, gracz2.talia_kart)
         przebieg_rozgrywki += przebieg_rozgrywki_tryb_do_odrzuconych
         print('THE WINNER is: ')
         przebieg_rozgrywki += 'THE WINNER is: \n'
         print(zwyciezca)
         przebieg_rozgrywki += zwyciezca
     elif tryb:
-        zwyciezca, przebieg_rozgrywki_tryb_do_reki = tryb_do_reki(gracz1, gracz2)
+        zwyciezca, przebieg_rozgrywki_tryb_do_reki = tryb_do_reki(gracz1.talia_kart, gracz2.talia_kart)
         przebieg_rozgrywki += przebieg_rozgrywki_tryb_do_reki
         przebieg_rozgrywki += 'THE WINNER is: \n'
         print(zwyciezca)
