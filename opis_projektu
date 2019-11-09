@@ -1,0 +1,50 @@
+Nazwa - *__gra_karciana_wojna.py__*
+
+Autor – *__Ksawery Karbowniczek__*
+
+Data powstania – *__Październik 2019r.__*
+
+Wersja oprogramowania – *__Python 3.7.4__*
+
+System operacyjny – *__Linux / Windows__*
+___
+**Wstęp**
+
+>Gra karciana Wojna rozgrywana jest pomiędzy dwoma graczami. Przed rozpoczęciem rozgrywki gracze ustalają wielkość talii,
+jaką będą grać, a następnie tasują karty i rozdają w równej ilości między siebie. W trakcie gry gracze dobierają kartę 
+z wierzchu swojej talii i porównują ich numery – wyższa karta wygrywa. W przypadku remisu tj. wylosowaniu tych samych 
+kart przez obu zawodników dobierają oni kolejne karty do czasu, aż których z nich zwycięży. Gra podzielona została na 
+dwa tryby – `tryb do odrzuconych` i `tryb do ręki`. W `trybie do odrzuconych` karty biorące udział w pojedynku lądują 
+po nim na stosie kart odrzuconych, natomiast w `trybie do ręki` gracz, który przegrał pojedynek oddaje swoją kartę na 
+rzecz zwycięzcy. Zwycięża gracz, który posiada wszystkie karty z talii początkowej lub z większą ilością zwycięstw.
+
+**Rozgrywka**
+
+>Przebieg `gra_karciana_wojna.py` rozpoczyna się od ustalenia ilości kart w talii początkowej, która zostanie rozdana 
+między obu graczy. Cała talia kart to 52 karty, zatem maksymalnie użytkownik może podać liczbę 26 kart przypadających 
+dla każdego z graczy. W przypadku podania złej liczby program odpytuje w nieskończoność użytkownika o podanie poprawnej 
+liczby. Następnie obu graczom zostają przyporządkowane dwie podtalie kart, którymi będą operować podczas rozgrywki. W 
+następnym kroku użytkownik jest proszony o wybór trybu gry - `tryb do ręki` lub `tryb do odrzuconych`. Jest to koniec 
+konfiguracji programu, pora rozpocząć **WOJNĘ** !!!
+
+**Moduły dodatkowe**
+
+>Używane moduły zewnętrzne: `random`, `datetime`
+
+>Używane moduły wewnętrzne: `funkcje własne`
+
+**Informacje dodatkowe**
+
+>Lista słowników kart – jest to lista zawierająca słowniki, które opisują kolor karty, jej numer oraz **moc**, która 
+wykorzystywana jest przy porównywaniu kart i ocenie, która z nich jest **silniejsza**.
+
+>Na początku działania programu gracze nie otrzymują kart do swojej talii, lecz numery od 2 do 2*ilość kart dla jednego
+gracza. Po uzyskaniu tych numerów, z listy słowników kart przyporządkowywane są każdemu z graczy odpowiednie słowniki z
+listy na podstawie wylosowanych i przyporządkowanych wcześniej liczb. W taki sposób każdy z graczy wie jakiego koloru 
+ma karty i z jakim numerem.
+
+>`Tryb do ręki` sprawia, że po każdym pojedynku przegrany musi oddać swoje karty przeciwnikowi. W tym trybie zwycięża 
+ten gracz, który posiada wszystkie karty, a jego przeciwnik nie ma kart na ręku i nie ma czym grać.
+
+>W obu trybach gry, podczas remisu w pojedynku gracze dobierają karty tak długo, aż których z nich zwycięży. Taki 
+remisowy pojedynek jest uznawany jako jedna potyczka, licznik zwycięstw któregoś z gracz wzrośnie jedynie o jeden punkt.
